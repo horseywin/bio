@@ -31,7 +31,15 @@ body {
   justify-content: flex-end;
   position: fixed;
   top: 0;
-  
+  z-index: 9999999;
+}
+
+#profile-picture {
+  border-radius: 15px;
+  position: absolute;
+  left: 0;
+  height: 80%;
+  margin-left: 10px;
 }
 
 #navbar ul {
@@ -49,6 +57,21 @@ body {
 
 a {
   text-decoration: none;
+}
+
+#about {
+  height: 800px;
+  width: 100vw;
+  background-color: rgb(133, 133, 133);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  padding: 30px;
+}
+
+#about-title {
+  
 }
 
 #welcome-section {
@@ -85,7 +108,7 @@ a {
   white-space: nowrap;
   background-color: var(--third-color);
   position: relative;
-  padding: 20px;
+  padding: 30px;
 }
 
 #projects h1{
@@ -111,35 +134,36 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 10px;
 }
 
 #tetris-game {
-  background: url("https://i.imgur.com/Oiv13aX.jpeg");
+  background: url(Tetris-Thumbnail.jpeg);
   background-position: 30% 50%;
 }
 
 #arithmetic-arranger {
-  background: url(https://i.imgur.com/vZGmhNq.png);
+  background: url(calculator-thumbnail.png);
 
 }
 
 #online-bio {
-  background: url(https://i.imgur.com/kLwLKYh.png);
+  background: url(bio-thumbnail.png);
   background-size: cover;
   background-position: 50% 50%;
 }
 
 #linux-terminal {
-  background: url(https://i.imgur.com/9RxNvV7.png);
+  background: url(mock-linux-thumbnail.png);
 }
 
 #time_calculator {
-  background: url(https://i.imgur.com/EMFztBX.png);
+  background: url(time-calculator-thumbnail.png);
 }
 
 #contact {
   background-color: black;
-  padding: 20px;
+  padding: 30px;
   font-size: 80px;
   text-align: center;
 }
@@ -148,6 +172,10 @@ a {
   text-align: center;
   font-size: 40px;
   margin-bottom: 20px;
+}
+
+.fa-brands:hover {
+  color: var(--secondary-color);
 }
 
 @media screen and (max-width: 768px) {
