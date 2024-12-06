@@ -76,6 +76,7 @@ a {
 
 #about-description {
   font-size: 20px;
+  margin-top: 30px;
 }
 
 #about-images {
@@ -87,6 +88,7 @@ a {
 
 #about-container {
   display: flex;
+  flex-direction: row;
   max-width: 90vw;
 }
 
@@ -205,16 +207,68 @@ a {
   color: var(--secondary-color);
 }
 
+#certifications {
+  background-color: rgb(0, 201, 201);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#certificates {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#certifications-header {
+  font-size: 40px;
+}
+
+.certificate {
+  width: 100%;
+  min-width: 300px;
+  max-width: 500px;
+}
+
 @media screen and (max-width: 768px) {
   #welcome-section {
     height: 600px;
+  
+  }
+  #about-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about-images {
+    flex-direction: row;
   }
 }
 
 @media (min-width: 1024px) {
   /* Styles for screens larger than or equal to 1024px */
+
   #scratch-thumbnail {
     width: 0px;
     height: 0px;
+    margin: 0;
+  }
+
+  .about-thumbnails {
+    align-items: center;
+  }
+
+  #html-thumbnail {
+    flex: 0;
+    width: 400px;
+    height: 100px !important;
+    object-fit: cover;
+    margin-top: 60px;
   }
 }
