@@ -53,7 +53,7 @@ body {
   list-style: none;
   align-items: center;
   font-size: 20px;
-  
+  isolation: isolate;
 }
 #navbar ul li {
   flex: 1;
@@ -115,6 +115,7 @@ a {
 
 #hero-text {
   font-size: 60px;
+  text-align: center;
 }
 
 #hero-subtitle {
@@ -248,6 +249,10 @@ a {
 
   #about-images {
     flex-direction: row;
+  }
+
+  #navbar ul {
+    flex: 1;
   }
 }
 
