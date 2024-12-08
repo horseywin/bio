@@ -277,3 +277,32 @@ a {
     margin-top: 60px;
   }
 }
+
+.slider-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  height: 100px;
+  position: relative;
+  isolation: isolate; /* If ommitted, child pseudo element will be stacked behind */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-button::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(234, 88, 10);
+  top: 0%;
+  left: 110%;
+  right: 10%;
+  bottom: 0%;
+  transition: left 500ms ease-out;
+
+  z-index: -1;
+}
+
+.slider-button:hover::before {
+  left: 10%;
+}
