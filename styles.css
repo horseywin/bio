@@ -204,6 +204,7 @@ a {
   margin-bottom: 20px;
 }
 
+
 #contact i:hover {
   color: var(--secondary-color);
 }
@@ -237,46 +238,7 @@ a {
   max-width: 500px;
 }
 
-@media screen and (max-width: 768px) {
-  #welcome-section {
-    height: 600px;
-  
-  }
-  #about-container {
-    display: flex;
-    flex-direction: column;
-  }
 
-  #about-images {
-    flex-direction: row;
-  }
-
-  #navbar ul {
-    flex: 1;
-  }
-}
-
-@media (min-width: 1024px) {
-  /* Styles for screens larger than or equal to 1024px */
-
-  #scratch-thumbnail {
-    width: 0px;
-    height: 0px;
-    margin: 0;
-  }
-
-  .about-thumbnails {
-    align-items: center;
-  }
-
-  #html-thumbnail {
-    flex: 0;
-    width: 400px;
-    height: 100px !important;
-    object-fit: cover;
-    margin-top: 60px;
-  }
-}
 
 .slider-button {
   cursor: pointer;
@@ -318,3 +280,105 @@ a {
   align-items: center;
   
 }
+
+.checkbtn {
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+ }
+
+ #hamburger-check:checked ~ .nav-mobile {
+  display: flex;
+ }
+
+ #hamburger-check {
+  display: none;
+ }
+
+.nav-mobile {
+  right: 0;
+  top: 100%;
+  height: 240px;
+  flex-direction: column;
+  text-align: center;
+  width: 200px;
+  position: absolute;
+  background-color: rgb(255, 115, 40);
+  display: none;
+  justify-content: center;
+}
+
+.nav-mobile a {
+  flex: 1;
+  font-size: 20px;
+  width: 100%;
+  padding: 10px;
+  position: relative;
+  isolation: isolate;
+}
+
+.nav-mobile a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  right: 0%;
+  background-color: rgb(234, 88, 10);
+  z-index: -1;
+  transition: left 500ms ease-out;
+}
+
+.nav-mobile a:hover::before {
+  left: 00%;
+}
+
+ @media screen and (max-width: 768px) {
+  #welcome-section {
+    height: 600px;
+  
+  }
+  #about-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about-images {
+    flex-direction: row;
+  }
+
+  #navbar ul {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Styles for screens larger than or equal to 1024px */
+
+  .checkbtn{
+    display: none;
+  }
+
+  #scratch-thumbnail {
+    width: 0px;
+    height: 0px;
+    margin: 0;
+  }
+
+  .about-thumbnails {
+    align-items: center;
+  }
+
+  #html-thumbnail {
+    flex: 0;
+    width: 400px;
+    height: 100px !important;
+    object-fit: cover;
+    margin-top: 60px;
+  }
+}
+
