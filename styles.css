@@ -211,6 +211,7 @@ a {
   background: url(fuzzy.gif);
   padding: 30px;
   font-size: 80px;
+  background-attachment: fixed;
   text-align: center;
 }
 
