@@ -144,6 +144,7 @@ a {
   font-size: 40px;
 }
 
+
 #projects {
   display: flex;
   flex-direction: row;
@@ -355,13 +356,14 @@ a {
   left: 00%;
 }
 
- @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #welcome-section {
     height: 600px;
   
   }
   #about-container {
-    display: flex;
+    position: relative;
+    display: block;
     flex-direction: column;
   }
 
