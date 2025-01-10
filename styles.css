@@ -138,6 +138,7 @@ a {
   color: var(--secondary-color);
   font-size: 40px;
   font-weight: 1;
+  text-align: center;
 }
 
 #project-title {
@@ -405,6 +406,12 @@ a {
 
   .popup {
     background-position: center;
+    position: scroll;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100vw;
+    margin-bottom: 0;
+    height: 90vh;
   }
 
   #welcome-section {
