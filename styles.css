@@ -231,6 +231,13 @@ a {
   color: var(--secondary-color);
 }
 
+#contact p {
+  font-size: 40px;
+}
+
+#contact a {
+  display: inline-block;
+}
 #certifications {
   background: url(bluebox.jpg);
   background-repeat: no-repeat;
@@ -403,6 +410,10 @@ a {
 
 /* mobile */
 @media screen and (max-width: 1024px) {
+
+  #contact p {
+    font-size: 20px;
+  }
 
   .popup {
     background-position: center;
