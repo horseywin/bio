@@ -3,6 +3,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Fira Code", serif;
+  font-optical-sizing: auto;
+  font-weight: 10px;
+  font-style: normal;
 
 
   color: white;
@@ -31,7 +35,7 @@ body {
   justify-content: flex-end;
   position: fixed;
   top: 0;
-  z-index: 9999999;
+  z-index: 10;
 }
 
 #profile-picture {
@@ -249,6 +253,8 @@ a {
 
 #certifications-header {
   font-size: 40px;
+  padding: 10px;
+  background: rgba(58, 58, 58, 0.696);
 }
 
 .certificate {
@@ -356,7 +362,49 @@ a {
   left: 00%;
 }
 
+.popup {
+  height: 80vh;
+  width: 80vw;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 12;
+  margin: 10vh 10vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px;
+}
+
+.popup-title {
+  background: rgba(58, 58, 58, 0.696);
+  display: inline-block;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.popup-description {
+  background: rgba(58, 58, 58, 0.696);
+  display: block;
+  padding: 10px;
+}
+
+.popup-exit {
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.584);
+}
+
+/* mobile */
 @media screen and (max-width: 768px) {
+
+  .popup {
+    background-position: center;
+  }
+
   #welcome-section {
     height: 600px;
   
@@ -374,6 +422,10 @@ a {
   #navbar ul {
     display: none;
   }
+
+  #certifications, #contact, #projects, #project-title, #welcome-section, #about, a#navbar {
+  background-attachment: scroll;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -389,6 +441,7 @@ a {
     margin: 0;
   }
 
+ 
   .about-thumbnails {
     align-items: center;
   }
