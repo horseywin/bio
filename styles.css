@@ -373,6 +373,7 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 50px;
+  cursor: pointer;
 }
 
 .popup-title {
