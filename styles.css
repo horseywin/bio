@@ -173,6 +173,7 @@ a {
   align-items: center;
   justify-content: flex-end;
   margin: 0 15px;
+  cursor: pointer;
 
 }
 
@@ -373,7 +374,6 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 50px;
-  cursor: pointer;
 }
 
 .popup-title {
@@ -397,6 +397,7 @@ a {
   left: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.584);
+  cursor: pointer;
 }
 
 /* mobile */
