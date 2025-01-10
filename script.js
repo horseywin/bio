@@ -12,7 +12,7 @@ console.log("added button")
 function tetrisPopup() {
 document.getElementById("tetris-game").addEventListener("click", () => {
     console.log("spawning popup")
-    addPopUp("Tetris game", "This project is something I came up with as a challenge. My teacher was speaking of an grade 10 assessment on building a Tetris game. The only language I could do it with was Python. So here I am. Using Godot or another language like javascript would have been an easier language. Python is not a language of games or UI nevertheless and Tetris game! I used coloured emojis like {🟥 🟦 🟨} to make a decent enough appeal. Have a look at the code at the github page below!", "Tetris-Game-Coding.png", "https://github.com/horseywin/Tetris-Game")
+    addPopUp("Tetris game", "This project was a challenge. My teacher was speaking of an grade 10 assessment on building a Tetris game. The only language I could do it with was Python. So here I am. Using Godot or another language like javascript would have been an easier language. Python is not a language of games or UI nevertheless and Tetris game! I used coloured emojis like {🟥 🟦 🟨} to make a decent enough appeal. Have a look at the code at the github page below!", "Tetris-Game-Coding.png", "https://github.com/horseywin/Tetris-Game")
 }
 )}
 
