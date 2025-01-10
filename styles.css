@@ -406,7 +406,7 @@ a {
 
   .popup {
     background-position: center;
-    position: scroll;
+    position: fixed;
     margin-left: 0;
     margin-right: 0;
     width: 100vw;
@@ -433,15 +433,24 @@ a {
   }
 
   #certifications, #contact, #projects, #project-title, #welcome-section, #about, a#navbar {
-  background-attachment: scroll;
+  background-attachment: fixed;
+  }
+
+  .checkbtn{
+    display: block;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   /* Styles for screens larger than or equal to 1024px */
 
   .checkbtn{
     display: none;
+  }
+
+
+  #navbar ul {
+    display: flex;
   }
 
   #scratch-thumbnail {
