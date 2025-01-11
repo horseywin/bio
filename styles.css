@@ -382,6 +382,7 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 50px;
+  overflow-y: scroll;
 }
 
 .popup-title {
@@ -421,8 +422,7 @@ a {
     margin-left: 0;
     margin-right: 0;
     width: 100vw;
-    margin-bottom: 0;
-    height: 90vh;
+    height: 80vh;
   }
 
   #welcome-section {
