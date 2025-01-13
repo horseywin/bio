@@ -1,145 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="en-US">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="description" content="Hi, I am Zachary Cheung, a self-taught coder sharing my projects, coding journey, and love for Python, HTML, and beginner-friendly languages.">
+    <meta name="keywords" content="Zachary Cheung, horseywin, Zachary, Cheung, cheung, coding projects, beginner coder">
+    <meta name="author" content="Zachary Cheung">
+    <meta property="og:title" content="Zachary Cheung - Self-Taught Coder">
+    <meta property="og:description" content="Discover Zachary Cheung's coding projects and backstory. Learn about his journey in Python, HTML, and other beginner-friendly languages.">
+    <meta property="og:image" content="https://wallpapers.com/images/hd/coding-background-9izlympnd0ovmpli.jpg">
+    <meta property="og:type" content="website">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passcode Protected</title>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #000;
-            color: #fff;
-            text-align: center;
-        }
+    <title>Zachary Cheung</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+        
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <!--Font-->
 
-        #password-protected {
-            background: rgba(255, 102, 0, 0.1); /* Slightly transparent orange */
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 15px rgba(255, 102, 0, 0.5); /* Orange shadow */
-            border: 2px solid rgba(255, 102, 0, 0.8);
-            backdrop-filter: blur(8px);
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #ff6600;
-        }
-
-        h2 {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            color: #fff;
-        }
-
-        input[type="password"] {
-            width: 80%;
-            padding: 12px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            outline: none;
-            transition: all 0.3s;
-            text-align: center;
-            background: rgba(255, 102, 0, 0.2); /* Light orange */
-            color: #fff;
-        }
-
-        input[type="password"]:focus {
-            background: rgba(255, 102, 0, 0.4);
-            box-shadow: 0 0 10px rgba(255, 102, 0, 0.6);
-        }
-
-        button {
-            padding: 12px 20px;
-            font-size: 1rem;
-            color: #000;
-            background: #ff6600;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.2s;
-        }
-
-        button:hover {
-            background: #e55b00;
-            transform: scale(1.05);
-        }
-
-        /* Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
-</head>
-<body>
-    <div id="password-protected">
-        <h1>Passcode Protected</h1>
-        <h2>Please enter the passcode to proceed</h2>
-        <input type="password" placeholder="Enter Passcode" />
-        <br />
-        <button>Submit</button>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5VG029S8QP"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            if (typeof CryptoJS !== "undefined") {
-                console.log("Crypto.js is loaded and ready");
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-                const storedHash = "487170c2cbd4fee1e65bcc2cc8d207f1fbe924cfe01deb788912d859558a3616"; // SHA256 for "gudetama"
-
-                document.querySelector("button").addEventListener("click", () => {
-                    const userInput = document.querySelector("input[type='password']").value.trim(); // Trim whitespace
-                    
-                    if (userInput === "") {
-                        alert("Please enter a passcode.");
-                        return;
-                    }
-
-                    console.log("User input:", userInput); // Debugging user input
-
-                    // Check if Crypto.js is accessible
-                    if (typeof CryptoJS === "undefined") {
-                        console.log("CryptoJS is NOT available!");
-                        return;
-                    }
-
-                    const hash = CryptoJS.SHA256(userInput).toString();
-
-                    console.log("Hashed input:", hash); // Debug to verify hashing
-
-                    if (hash === storedHash) {
-                        window.location.href = "portal.html";
-                    } else {
-                        alert("Incorrect password.");
-                    }
-                });
-            } else {
-                console.log("CryptoJS is NOT loaded.");
-            }
-        });
+      gtag('config', 'G-5VG029S8QP');
     </script>
-</body>
-</html>
+    <!-- person google identifer-->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Zachary Cheung",
+        "url": "https://horseywin.github.io/bio/",
+        "sameAs": [
+          "https://github.com/horseywin",
+          "https://www.reddit.com/user/Actual-Smell8272/",
+          "https://discordlookup.com/user/1119513901613195324",
+          "https://www.freecodecamp.org/Zachary-Cheung",
+          "https://www.horsey2019@duck.com"
+        ],
+        "jobTitle": "Self-taught Developer",
+        "alumniOf": "FreeCodeCamp",
+        "knowsAbout": ["Python", "HTML", "CSS", "AI Programming"]
+      }
+    </script>
+    <!--end of google identifer-->
 
+    <!--Project identifiers-->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Tetris Game",
+        "url": "https://horseywin.github.io/tetris",
+        "author": {
+          "@type": "Person",
+          "name": "Zachary Cheung"
+        },
+        "description": "A Tetris game built using colored emojis.",
+        "applicationCategory": "Game",
+        "operatingSystem": "All",
+        "programmingLanguage": "Python"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        "name": "Arithmetic Arranger",
+        "url": "https://github.com/horseywin/arithmetic-arranger",
+        "author": {
+          "@type": "Person",
+          "name": "Zachary Cheung"
+        },
+        "description": "A Python script that arranges arithmetic problems vertically and horizontally.",
+        "programmingLanguage": "Python",
+        "codeRepository": "https://github.com/horseywin/arithmetic-arranger"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Online Bio",
+        "url": "https://horseywin.github.io/bio/",
+        "author": {
+          "@type": "Person",
+          "name": "Zachary Cheung"
+        },
+        "description": "An online biography of a zachary's freind"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        "name": "Mock Linux Terminal",
+        "url": "https://github.com/horseywin/mock-linux-terminal",
+        "author": {
+          "@type": "Person",
+          "name": "Zachary Cheung"
+        },
+        "description": "A mock Linux terminal interface built with Python.",
+        "programmingLanguage": "Python",
+        "codeRepository": "https://github.com/horseywin/mock-linux-terminal"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        "name": "Time Calculator",
+        "url": "https://github.com/horseywin/time-calculator",
+        "author": {
+          "@type": "Person",
+          "name": "Zachary Cheung"
+        },
+        "description": "A Python program that adds or subtracts time durations.",
+        "programmingLanguage": "Python",
+        "codeRepository": "https://github.com/horseywin/time-calculator"
+      }
+    </script>
+    
+  </head>
+  <body>
+    <div id="navbar">
+      <img id="profile-picture" src="profile-thumbnail.jpg" alt="profile-picture">
+      <input type="checkbox" id="hamburger-check">
+      <label for="hamburger-check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <div class="nav-mobile">
+          <a href="#welcome-section">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#about-title">About</a>
+          <a href="#contact">Contact</a>
+      </div>
+      <ul>
+        <li class="slider-button"><a href="#welcome-section">Home</a></li>
+        <li class="slider-button"><a href="#projects">Projects</a></li>
+        <li class="slider-button"><a href="#about-title">About</a></li>
+        <li class="slider-button"><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div id="welcome-section">
+      <h1 id="hero-text">Hi, I'm Zachary</h1>
+      <h2 id="hero-subtitle">a self-taught developer.</h2>
+    </div>
+    <div id="about">
+      <h1 id="about-title">A bit about myself.</h1>
+      <div id="about-container">
+      <p id="about-description">I'm horseywin. <br>Well that's my gamer-tag anyway. In reality I have a much more boring name. As a teen, After school I enjoy programming. I vary between HTML, CSS and Python. I first decided to learn programming in grade 5 when I discorvered <a class="underline" href="https://scratch.mit.edu/users/horseywin/">scratch</a>. This quickly fell apart when I was banned for not liking homosexual promotion to children. Looking back I'm glad I was banned from the platform it gave me the push to learn text based languages. I'm also interested in AI programming and advanced python. Thoughout my 5 months on learning I've used unity, fiddled around with C#, built websites for my freinds and even made a tetris game using colored emojis.<br><br>All of my projects and even this website was brought to life on a Macbook Air I received as a christamas gift in 2020. I'm mostly self-taught, resources like <a class="underline" href="https://www.freecodecamp.org/">FreeCodeCamp</a> and <a class="underline" href="https://developer.mozilla.org/en-US/">mozilla docs</a> made self-taught learning so much easier. <br><br>Right now I'm working on making this website the 1# search result for "Zachary Cheung"<br><br>If you're needing a static website similar to this, email me at horsey2019@duck.com and we can work together!</p>
+      <div id="about-images">
+        <img class="about-thumbnails" id="scratch-thumbnail" src="scratch-thumbnail.png" alt="scratch.mit.edu">
+        <img class="about-thumbnails" src="html_thumbnail.jpeg" id="html-thumbnail" alt="coding html">
+</div>
+</div>
+    </div>
+    <h2 id="project-title">Here are some of my projects</h2>
+    <div id="projects">
+      <div class="project-tile" id="tetris-game">
+        <h2 class="project-title">Tetris</h2>
+      </div>
+        <div class="project-tile" id="arithmetic-arranger">
+          <h2 class="project-title">Arithmetic arranger</h2>
+        </div>
+        <div class="project-tile" id="online-bio">
+          <h2 class="project-title">Online Bio</h2>
+        </div>
+      <a href="https://github.com/horseywin/Mock-Linux-Terminal-">
+        <div class="project-tile" id="linux-terminal">
+          <h2 class="project-title">Mock Linux Terminal</h2>
+        </div>
+      </a>
+      <a href="https://github.com/horseywin/Time-adder--python-">
+        <div class="project-tile" id="time_calculator">
+          <h2 class="project-title">Time Calculator</h2>
+        </div>
+      </a>
+    </div>
+    <div id="certifications">
+      <h2 id="certifications-header">Some of my certifications.</h2>
+      <div id="certificates">
+        <a href="https://www.freecodecamp.org/certification/Zachary-Cheung/responsive-web-design"><img src="responsive%20design.png" class="certificate" alt="responsive design certificate"></a>
+        <a href="https://www.freecodecamp.org/certification/Zachary-Cheung/scientific-computing-with-python-v7"><img src="python-certificate.png" class="certificate" alt="python certificate"></a>
+        <a href="https://app.cybrary.it/profile/horseyhacker?tab=cert-completion&cert=CC-f526fc6f-3b57-46cf-8789-f7e4f95b0c69"><img src="cybrary.png" class="certificate" alt="cybrary networking certificate"></a>
+      </div>
+      
+    </div>
+    <div id="contact">
+      <h1 id="contact-header">Let's work together.</h1>
+      <a  href="https://github.com/horseywin" target="_blank">
+        <i class="fa-brands fa-github"></i>
+        <p>Github</p>
+      </a>
+      <a  href="https://www.reddit.com/user/Actual-Smell8272/"  target="_blank">
+        <i class="fa-brands fa-reddit"></i>
+        <p>Reddit</p>
+      </a>
+      <a  href="https://discordlookup.com/user/1119513901613195324"  target="_blank">
+        <i class="fa-brands fa-discord"></i>
+        <p>Discord</p>
+      </a>
+      <a href="mailto:horsey2019@duck.com">
+        <i class="fa-solid fa-envelope"></i>
+        <p>Mail</p>
+      </a>
+      <a href="https://www.freecodecamp.org/Zachary-Cheung" target="_blank">
+        <i class="fa-brands fa-free-code-camp"></i>
+        <p>FreeCodeCamp</p>
+      </a>
+    </div>
+    <!--Javascript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" defer></script>
+    <script src="script.js"></script>
+    <!--Javascript-->
+  </body>
+</html>
