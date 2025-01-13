@@ -1,4 +1,5 @@
 // This function creates the popup with the given details
+
 function addPopUp(title, description, imageURL, link, popupDivName) {
     const BodyTag = document.getElementsByTagName("body")[0];
     BodyTag.innerHTML += `
