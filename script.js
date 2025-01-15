@@ -43,3 +43,9 @@ document.querySelectorAll(".popup-exit").forEach(exit => {
         activePopups.forEach(popup => popup.style.display = "none");
     });
 });
+
+function hideDisclaimer() {
+    console.log("Hiding disclaimer");
+    document.getElementById("disclaimer").style.display = "none";
+
+}
