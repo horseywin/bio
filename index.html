@@ -15,10 +15,7 @@
     <title>Zachary Cheung</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="icon" href="coding-icon.png" type="image/svg+xml">
         
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -148,27 +145,49 @@
       </div>
       <ul>
         <li class="slider-button"><a href="#welcome-section">Home</a></li>
-        <li class="slider-button"><a href="#projects">Projects</a></li>
-        <li class="slider-button"><a href="#about-title">About</a></li>
+        <li class="slider-button"><a href="#about-title">Projects</a></li>
+        <li class="slider-button"><a href="#view-my-work-button">About</a></li>
         <li class="slider-button"><a href="#contact">Contact</a></li>
       </ul>
     </div>
-    
     <div id="welcome-section">
+      <video autoplay muted loop id="coding-screensaver">
+        <source src="coding-screensaver.mp4" type="video/mp4">
+      </video>
       <h1 id="hero-text">Hi, I'm Zachary</h1>
-      <h2 id="hero-subtitle">a self-taught developer.</h2>
+      <h2 id="hero-subtitle">a Web Developer Who Brings Ideas to Life.</h2>
+      <a href="#about-title"><button id="view-my-work-button">View my work</button></a>
     </div>
+    <h1 class="heading">A bit about myself.</h1>
     <div id="about">
-      <h1 id="about-title">A bit about myself.</h1>
-      <div id="about-container">
-      <p id="about-description">I'm horseywin. <br>Well that's my gamer-tag anyway. In reality I have a much more boring name. As a teen, After school I enjoy programming. I vary between HTML, CSS and Python. I first decided to learn programming in grade 5 when I discorvered <a class="underline" href="https://scratch.mit.edu/users/horseywin/">scratch</a>. This quickly fell apart when I was banned for not liking homosexual promotion to children. Looking back I'm glad I was banned from the platform it gave me the push to learn text based languages. I'm also interested in AI programming and advanced python. Thoughout my 5 months on learning I've used unity, fiddled around with C#, built websites for my freinds and even made a tetris game using colored emojis.<br><br>All of my projects and even this website was brought to life on a Macbook Air I received as a christamas gift in 2020. I'm mostly self-taught, resources like <a class="underline" href="https://www.freecodecamp.org/">FreeCodeCamp</a> and <a class="underline" href="https://developer.mozilla.org/en-US/">mozilla docs</a> made self-taught learning so much easier. <br><br>Right now I'm working on making this website the 1# search result for "Zachary Cheung"<br><br>If you're needing a static website similar to this, email me at horsey2019@duck.com and we can work together!</p>
-      <div id="about-images">
-        <img class="about-thumbnails" id="scratch-thumbnail" src="scratch-thumbnail.png" alt="scratch.mit.edu">
-        <img class="about-thumbnails" src="html_thumbnail.jpeg" id="html-thumbnail" alt="coding html">
-</div>
-</div>
+      <i class="fa-solid fa-code"></i>
+      <div id="about-text-container">
+        <p id="about-description">Hello there! I'm Zachary Cheung. I enjoy programming after school, mainly working with HTML, CSS, and Python. I first got into coding in grade 5 with Scratch, but after being banned, I moved to text-based languages. I’m currently learning AI programming and using tools like Unity and FreeCodeCamp. Right now, I’m focused on making this website the top search result for “Zachary Cheung.” <br><br>If you need a static website, email me at horsey2019@duck.com!</p>
+      </div>
     </div>
-    <h2 id="project-title">Here are some of my projects</h2>
+    <div id="services">
+      <h1 class="heading">What I Can Do for You</h1>
+      <div id="service-cards">
+        <div id="service-cards">
+          <div class="service-card">
+            <h2>Website Building</h2>
+            <p>Creative, user-friendly, and customized website designs to fit your needs.</p>
+          </div>
+          <div class="service-card">
+            <h2>Shopify</h2>
+            <p>Basic Shopify store setup and customization services.</p>
+          </div>
+          <div class="service-card">
+            <h2>IT Support</h2>
+            <p>Specialized in troubleshooting Mac problems with effective solutions.</p>
+          </div>
+          <div class="service-card">
+            <h2>Python Basics</h2>
+            <p>Beginner-friendly guidance to help you learn Python programming fundamentals.</p>
+          </div>
+        </div>
+    </div>
+    <h1 class="heading">Here are some of my projects</h1>
     <div id="projects">
       <div class="project-tile" id="tetris-game">
         <h2 class="project-title">Tetris</h2>
@@ -191,7 +210,7 @@
       </a>
     </div>
     <div id="certifications">
-      <h2 id="certifications-header">Some of my certifications.</h2>
+      <h1 class="heading">Some of my certifications.</h1>
       <div id="certificates">
         <a href="https://www.freecodecamp.org/certification/Zachary-Cheung/responsive-web-design"><img src="responsive%20design.png" class="certificate" alt="responsive design certificate"></a>
         <a href="https://www.freecodecamp.org/certification/Zachary-Cheung/scientific-computing-with-python-v7"><img src="python-certificate.png" class="certificate" alt="python certificate"></a>

@@ -1,0 +1,485 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Code", serif;
+  font-optical-sizing: auto;
+  font-weight: 10px;
+  font-style: normal;
+
+
+
+  color: var(--normal-text);
+}
+
+:root {
+
+    --heading-text: #ff5733; /* Fiery orange-red for eye-catching headings */
+    --normal-text: #d9d9d9; /* Soft gray for comfortable reading */
+    --subtitle-text: #b0b0b0; /* Muted gray for less prominent subtitles */
+    --secondary-color: #262626; /* Charcoal black for contrast and depth */
+    --primary-color: #ff6f61; /* Vibrant coral for primary elements */
+    --hover-color: #ff6739; /* Warm peach for hover effects */
+    --nav-bar: #1e1e1e; /* Graphite black for a polished navigation bar */
+    --nav-bar-hover: #ff4500; /* Bright orange-red for active navigation */
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #121212;
+}
+
+
+#navbar {
+  background-color: var(--nav-bar);
+  width: 100vw;
+  height: 100px;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+#profile-picture {
+  border-radius: 15px;
+  position: absolute;
+  left: 0;
+  height: 80%;
+  margin-left: 10px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+#navbar ul {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  list-style: none;
+  align-items: center;
+  font-size: 20px;
+  isolation: isolate;
+}
+#navbar ul li {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+#about {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-text-container {
+  width: 80vw;
+}
+
+#about i {
+  font-size: 10vw;
+  padding: 20px;
+  text-shadow: 10px 8px 0px var(--heading-text);
+}
+
+#about-title {
+  width: 100vw;
+  text-align: center;
+  color: var(--heading-text);
+  padding: 20px;
+}
+
+#about-description {
+  padding: 20px;
+}
+
+#coding-screensaver {
+  top: 0;
+  margin-top: 100px;
+  width: 100vw;
+  height: 900px;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+#service-cards {
+  display: grid; /* Turns it into a grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px !important; /* Space between the grid items */
+}
+
+.service-card {
+  background-color: var(--secondary-color);
+  min-height: 200px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 5px var(--secondary-color);
+  padding: 20px;
+}
+
+#welcome-section {
+  top: 0;
+  margin-top: 100px;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero-text {
+  font-size: 60px;
+  text-align: center;
+  color: var(--heading-text);
+  background-color: #000000a8;
+  text-shadow: 0px 0px 20px var(--heading-text);
+  padding: 10px;;
+}
+
+#hero-subtitle {
+  text-shadow: 0px 0px 10px var(--subtitle-text);
+  padding: 10px;
+  color: var(--subtitle-text);
+  font-size: 40px;
+  font-weight: 1;
+  text-align: center;
+  background-color: #000000a8;
+}
+
+#view-my-work-button {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  padding: 0 10px;
+  border: none;
+  width: 200px;
+  height: 80px;
+  border-radius: 20px;
+  font-size: 20px;
+  margin: 20px;
+  box-shadow: 0px 0px 10px 5px var(--secondary-color);
+  transition: background-color 1000ms ease-out;
+}
+
+#view-my-work-button:hover {
+  background-color: var(--hover-color);
+  box-shadow: 0px 0px 10px 5px var(--hover-color);
+  
+}
+
+.heading {
+  color: var(--heading-text);
+  text-shadow: 0px 0px 20px var(--heading-text);
+  width: 100vw;
+  text-align: center;
+  padding: 15px;
+}
+
+#projects {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  white-space: nowrap;
+  position: relative;
+  padding: 30px;
+  
+}
+
+.project-tile {
+  min-width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 15px;
+  cursor: pointer;
+
+}
+
+.project-title {
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--normal-text);
+  background-color: rgba(0, 0, 0, 0.751);
+}
+
+#tetris-game {
+  background : url(Tetris-Thumbnail.jpeg);
+  background-position: 30% 50%;
+}
+
+#arithmetic-arranger {
+  background: url(calculator-thumbnail.png);
+
+}
+
+#online-bio {
+  background: url(bio-thumbnail.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#linux-terminal {
+  background: url(mock-linux-thumbnail.png);
+}
+
+#time_calculator {
+  background: url(time-calculator-thumbnail.png);
+}
+
+#contact {
+  padding: 30px;
+  font-size: 80px;
+  text-align: center;
+}
+
+#contact-header {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+
+#contact i:hover {
+  color: var(--hover-color);
+}
+
+#contact p {
+  font-size: 40px;
+}
+
+#contact a {
+  display: inline-block;
+}
+#certifications {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#certificates {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#certifications-header {
+  color: var(--heading-text);
+  padding: 10px;
+}
+
+.certificate {
+  width: 100%;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+
+
+.slider-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  height: 100px;
+  position: relative;
+  isolation: isolate; /* If ommitted, child pseudo element will be stacked behind */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-button::before {
+  content: "";
+  position: absolute;
+  background-color: var(--nav-bar-hover);
+  top: 0%;
+  left: 110%;
+  right: 10%;
+  bottom: 0%;
+  transition: left 500ms ease-out;
+
+  z-index: -1;
+}
+
+.slider-button:hover::before {
+  left: 10%;
+}
+
+.slider-button a {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.checkbtn {
+  font-size: 3rem;
+  color: var(---normal-text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+ }
+
+ #hamburger-check:checked ~ .nav-mobile {
+  display: flex;
+ }
+
+ #hamburger-check {
+  display: none;
+ }
+
+.nav-mobile {
+  right: 0;
+  top: 100%;
+  height: 240px;
+  flex-direction: column;
+  text-align: center;
+  width: 200px;
+  position: absolute;
+  background-color: var(--nav-bar);
+  display: none;
+  justify-content: center;
+}
+
+.nav-mobile a {
+  flex: 1;
+  font-size: 20px;
+  width: 100%;
+  padding: 10px;
+  position: relative;
+  isolation: isolate;
+}
+
+.nav-mobile a::before {
+  background-color: var(--nav-bar-hover);
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  right: 0%;
+  z-index: -1;
+  transition: left 500ms ease-out;
+}
+
+.nav-mobile a:hover::before {
+  left: 00%;
+}
+
+.popup {
+  height: 80vh;
+  width: 80vw;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 12;
+  margin: 10vh 10vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px;
+  overflow-y: scroll;
+}
+
+.popup-title {
+  color: var(--heading-text);
+  background-color: #262626ca;
+  display: inline-block;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.popup-description {
+  background-color: #262626ca;
+  color: var(--normal-text);
+  display: block;
+  padding: 10px;
+}
+
+.popup-exit {
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.584);
+  cursor: pointer;
+}
+
+/* mobile */
+@media screen and (max-width: 1024px) {
+
+  #contact p {
+    font-size: 20px;
+  }
+
+  .popup {
+    background-position: center;
+    position: fixed;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100vw;
+    height: 80vh;
+  }
+
+  #welcome-section, #coding-screensaver {
+    height: 600px;
+  }
+
+  #navbar ul {
+    display: none;
+  }
+
+  .checkbtn{
+    display: block;
+  }
+
+  #about i {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  /* Styles for screens larger than or equal to 1024px */
+
+  .checkbtn{
+    display: none;
+  }
+
+
+  #navbar ul {
+    display: flex;
+  }
+
+}
+
+
