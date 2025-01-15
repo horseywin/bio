@@ -268,7 +268,7 @@ a {
 #service-cards {
   display: grid; /* Turns it into a grid layout */
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px !important; /* Space between the grid items */
+  gap: 20px; /* Space between the grid items */
   margin: 20px;
 }
 
@@ -338,28 +338,27 @@ a {
   background: url(time-calculator-thumbnail.png);
 }
 
-#certifications {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-#certificates {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 20px 0;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+#certifications-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px !important; /* Space between the grid items */
+  margin: 20px;
 }
 
 .certificate {
-  width: 100%;
-  min-width: 300px;
-  max-width: 500px;
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  box-shadow: 0 0 20px 5px var(--secondary-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.certificate i {
+  font-size: 80px;
 }
 
 #contact {
