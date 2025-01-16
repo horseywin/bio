@@ -26,6 +26,12 @@
   scroll-behavior: smooth;
 }
 
+.subtitle {
+  width: 100vw;
+  text-align: center;
+  color: var(--subtitle-text);
+}
+
 #disclaimer {
   position: fixed;
   top: 0;
@@ -70,6 +76,11 @@
   width: 100vw;
   text-align: center;
   padding: 15px;
+  font-size: 2em;
+}
+
+#about-heading {
+  font-size: 36px
 }
 
 
@@ -427,12 +438,6 @@ a {
   padding: 30px;
   font-size: 80px;
   text-align: center;
-}
-
-#contact-header {
-  text-align: center;
-  font-size: 40px;
-  margin-bottom: 20px;
 }
 
 
