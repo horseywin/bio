@@ -56,3 +56,29 @@ function hideDisclaimer() {
     localStorage.setItem('dontShowAgain', 'true');
 
 }
+
+document.querySelectorAll("#navbar ul li a").forEach(function(anchor) {
+    anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute("href");  // Get the target element ID (hash)
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            // Get the top position of the target element
+            const targetPosition = targetElement.offsetTop;
+
+            // Adjusted scroll offset to ensure visibility
+            const navbarHeight = 300;  // Adjust this value based on your navbar height
+            const scrollPosition = targetPosition - navbarHeight;
+
+            // Smooth scroll to the target position
+            window.scrollTo({
+                top: scrollPosition,
+                behavior: 'smooth'
+            });
+
+            console.log("Scrolling to", targetId);
+        }
+    });
+});
