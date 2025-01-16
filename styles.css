@@ -183,6 +183,10 @@ a {
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 
  }
 
@@ -350,6 +354,7 @@ a {
   margin: 0 15px;
   cursor: pointer;
   border-radius: 20px;
+  transition: box-shadow 500ms ease-out;
 }
 
 .project-tile:hover {
@@ -506,6 +511,10 @@ a {
 
 /* mobile */
 @media screen and (max-width: 1024px) {
+
+  .project-tile {
+    height: 200px;
+  }
 
   #welcome-section, #coding-screensaver {
     height: 600px;
