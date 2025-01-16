@@ -33,6 +33,7 @@
 }
 
 #disclaimer {
+  display: none;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -453,6 +454,10 @@ a {
 
 #contact p {
   font-size: 40px;
+}
+
+#contact p:hover {
+  text-shadow: 0px 0px 20px var(--heading-text);
 }
 
 #contact a {

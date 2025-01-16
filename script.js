@@ -1,5 +1,11 @@
 // This function creates the popup with the given details
 
+if (localStorage.getItem('dontShowAgain') === 'true') {
+    document.getElementById('disclaimer').style.display = 'none';  // Hide notification
+} else {
+    document.getElementById('disclaimer').style.display = 'block';  // Show notification
+}
+
 function addPopUp(title, description, imageURL, link, popupDivName) {
     const BodyTag = document.getElementsByTagName("body")[0];
     BodyTag.innerHTML += `
@@ -47,5 +53,6 @@ document.querySelectorAll(".popup-exit").forEach(exit => {
 function hideDisclaimer() {
     console.log("Hiding disclaimer");
     document.getElementById("disclaimer").style.display = "none";
+    localStorage.setItem('dontShowAgain', 'true');
 
 }
