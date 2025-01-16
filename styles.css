@@ -349,7 +349,10 @@ a {
   margin: 0 15px;
   cursor: pointer;
   border-radius: 20px;
+}
 
+.project-tile:hover {
+  box-shadow: 0 0 5px 5px var(--hover-color);
 }
 
 .project-title {
@@ -361,6 +364,9 @@ a {
   justify-content: center;
   color: var(--normal-text);
   background-color: rgba(0, 0, 0, 0.751);
+  border-radius: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 #tetris-game {
